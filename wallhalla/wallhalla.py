@@ -1,4 +1,5 @@
 import os.path
+import subprocess
 from time import sleep
 
 import attr
@@ -43,10 +44,14 @@ class WallChanger:
         if not self.__cache_dir.exists():
             self.__cache_dir.mkdir(parents=True)
 
-    def set_wallpaper(self, url: str, file_name: str):
-        path_str = os.path.join(self.__cache_dir, file_name)
-        with open(path_str, 'wb') as f:
-            f.write(requests.get(url).content)
+    def set_wallpaper(self, path: Path):
+        print(f'Setting wallpaper to {path}')
+        subprocess.run(
+            ['feh', '--bg-scale', path.absolute()],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
 
 class WHClient:
     def __init__(self, config: WHConfig):
@@ -71,6 +76,14 @@ class WHClient:
         collection = next(filter(lambda c: c['label'] == self.__config.collection, collections), None)
         return self.__get_json(resource=f'/collections/{self.__config.login}/{collection["id"]}', params={'page': page})
 
+    def download_wallpaper(self, url: str, file_name: str) -> Path:
+        path_str = os.path.join(self.__config.cache_dir, file_name)
+        path = Path(path_str)
+        if not path.exists():
+            with open(path_str, 'wb') as f:
+                f.write(requests.get(url).content)
+        return path
+
 class Wallhalla:
     def __init__(self, config: WHConfig, client: WHClient, changer: WallChanger):
         self.__config = config
@@ -87,10 +100,15 @@ class Wallhalla:
 
     def set_next(self):
         self.__refetch()
-        self.__current_wallpaper_id = next(filter(lambda w: w['id'] > self.__current_wallpaper_id, self.__wallpapers), None)['id']
+        current_wallpaper = next(filter(lambda w: w['id'] > self.__current_wallpaper_id, self.__wallpapers), None)
+        self.__current_wallpaper_id = current_wallpaper['id']
         self.__page_entry_index += 1
         self.__wallpaper_index += 1
         print(f'Next ID: {self.__current_wallpaper_id}; interation: {self.__wallpaper_index}')
+        file_url = current_wallpaper['path']
+        file_name = file_url.split('/')[-1]
+        wallpaper_path = self.__client.download_wallpaper(file_url, file_name)
+        self.__changer.set_wallpaper(wallpaper_path)
 
     def __fetch(self):
         walls_meta = self.__client.wallpapers(page=self.__page_index)
@@ -107,7 +125,6 @@ class Wallhalla:
             self.__wallpaper_index = 0
             self.__fetch()
         elif self.__is_page_end_reached():
-        # if self.__is_page_end_reached():
             print('Reached end of page')
             self.__page_index += 1
             self.__page_entry_index = 0
@@ -124,14 +141,11 @@ class Wallhalla:
         return time.time() - self.__last_fetched_at > self.__config.fetch_freq
 
     def schedule_collection(self):
-        # schedule.every(int(self.__config.freq_sec)).seconds.do(self.set_next)
-        #
-        # while True:
-        #     schedule.run_pending()
-        #     time.sleep(1)
+        schedule.every(self.__config.freq_sec).seconds.do(self.set_next)
+
         while True:
-            self.set_next()
-            time.sleep(self.__config.freq_sec)
+            schedule.run_pending()
+            time.sleep(1)
 
 
 if __name__ == '__main__':
@@ -142,8 +156,8 @@ if __name__ == '__main__':
 
 ### TODO:
 # 1. [ ] cache limit
-# 2. [ ] wall change timer
-# 3. [ ] extract wallhaven client
+# 2. [X] wall change timer
+# 3. [X] extract wallhaven client
 # 4. [ ] OPTIONAL: package for Archlinux
 # 5. [ ] OPTIONAL: tests?
 # 6. [ ] OPTIONAL: restructure project
