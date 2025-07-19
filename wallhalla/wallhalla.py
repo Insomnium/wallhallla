@@ -1,18 +1,20 @@
 import os.path
+from time import sleep
 
 import attr
 import configparser
 import argparse
-from pathlib import Path
-
 import requests
-
+from pathlib import Path
+import schedule
+import time
 
 class WHConfig:
     api_key: str = attr.ib()
     login: str = attr.ib()
     collection: str = attr.ib()
     cache_dir: str = attr.ib()
+    freq_sec: int = attr.ib()
 
     def __init__(self):
         file_conf = configparser.ConfigParser()
@@ -23,15 +25,19 @@ class WHConfig:
         arg_conf.add_argument('--login', help='Override login')
         arg_conf.add_argument('--cache-dir', help='Override cache directory')
         arg_conf.add_argument('--collection', help='Override collection')
+        arg_conf.add_argument('--freq-sec', help='Override frequency in seconds')
+        arg_conf.add_argument('--freq-fetch-sec', help='Collection content fetching interval in seconds')
         args = arg_conf.parse_args()
 
         self.api_key = args.api_key or file_conf["DEFAULT"]["api.key"]
         self.login = args.login or file_conf["DEFAULT"]["login"]
         self.collection = args.collection or file_conf["DEFAULT"]["collection"]
+        self.freq_sec = int(args.freq_sec or file_conf["DEFAULT"]["frequency.sec"])
         self.cache_dir = args.cache_dir or file_conf["CACHE"]["cache.dir"]
+        self.fetch_freq = int(args.freq_fetch_sec or file_conf["CACHE"]["cache.fetch.sec"])
 
 
-class Wallpaper:
+class WallChanger:
     def __init__(self, config: WHConfig):
         self.__cache_dir = Path(config.cache_dir)
         if not self.__cache_dir.exists():
@@ -42,38 +48,93 @@ class Wallpaper:
         with open(path_str, 'wb') as f:
             f.write(requests.get(url).content)
 
-class Wallhalla:
-    def __init__(self, config: WHConfig, wallpaper: Wallpaper):
+class WHClient:
+    def __init__(self, config: WHConfig):
         self.__config = config
-        self.__wallpaper = wallpaper
         self.__base_uri = 'https://wallhaven.cc/api/v1'
 
-    def collections(self):
-        response = requests.get(f'{self.__base_uri}/collections', params={'apikey': self.__config.api_key})
+    def __get_json(self, resource: str, params: dict = {}) -> dict:
+        print(f'Requesting resource {resource} with params {params}')
+        params.update({'apikey': self.__config.api_key})
+        response = requests.get(f'{self.__base_uri}{resource}', params=params)
 
         if not response.ok:
             raise RuntimeError(response.text)
 
-        return response.json()['data']
+        return response.json()
 
-    def set_random(self):
+    def collections(self):
+        return self.__get_json('/collections')['data']
+
+    def wallpapers(self, page: int = 0):
         collections = self.collections()
         collection = next(filter(lambda c: c['label'] == self.__config.collection, collections), None)
-        response = requests.get(f'{self.__base_uri}/collections/{self.__config.login}/{collection["id"]}', params={'apikey': self.__config.api_key})
+        return sorted(self.__get_json(resource=f'/collections/{self.__config.login}/{collection["id"]}', params={'page': page})['data'], key=lambda x: x['id'])
 
-        if not response.ok:
-            raise RuntimeError(response.text)
 
-        first_wallpaper = response.json()['data'][0]
+class Wallhalla:
+    def __init__(self, config: WHConfig, client: WHClient, changer: WallChanger):
+        self.__config = config
+        self.__client = client
+        self.__changer = changer
+        self.__wallpapers = []
+        self.__last_fetched_at = 0
+        self.__current_id = '0'
+        self.__page_size = 0
+        self.__page = 0
+        self.__page_entry_index = 0
+        self.__debug_counter = 0
 
-        file_url = first_wallpaper['path']
-        file_name = file_url.split('/')[-1]
-        self.__wallpaper.set_wallpaper(file_url, file_name)
-        print(first_wallpaper)
+    def set_next(self):
+        self.__refetch()
+        self.__current_id = next(filter(lambda w: w['id'] > self.__current_id, self.__wallpapers), None)['id']
+        self.__page_entry_index += 1
+        print(f'Next ID: {self.__current_id}; interation: {self.__debug_counter}')
+        self.__debug_counter += 1
+
+    def __refetch(self):
+        if self.__is_page_end_reached():
+            print('Reached end of page')
+            self.__page += 1
+            self.__page_entry_index = 0
+            self.__current_id = '0'
+            self.__wallpapers = self.__client.wallpapers(page=self.__page)
+            self.__last_fetched_at = time.time()
+            self.__page_size = len(self.__wallpapers)
+        elif self.__is_fetch_cache_expired():
+            print('Fetch cache expired...')
+            self.__wallpapers = self.__client.wallpapers(page=self.__page)
+            self.__page_size = len(self.__wallpapers)
+            self.__last_fetched_at = time.time()
+
+    def __is_page_end_reached(self):
+        return self.__page_entry_index >= self.__page_size
+
+    def __is_fetch_cache_expired(self):
+        return time.time() - self.__last_fetched_at > self.__config.fetch_freq
+
+    def schedule_collection(self):
+        # schedule.every(int(self.__config.freq_sec)).seconds.do(self.set_next)
+        #
+        # while True:
+        #     schedule.run_pending()
+        #     time.sleep(1)
+        while True:
+            self.set_next()
+            time.sleep(self.__config.freq_sec)
+
 
 if __name__ == '__main__':
     conf = WHConfig()
-    wh = Wallhalla(conf, Wallpaper(conf))
-    print(wh.collections())
+    wh = Wallhalla(conf, WHClient(conf), WallChanger(conf))
 
-    wh.set_random()
+    wh.schedule_collection()
+
+### TODO:
+# 1. [ ] cache limit
+# 2. [ ] wall change timer
+# 3. [ ] extract wallhaven client
+# 4. [ ] OPTIONAL: package for Archlinux
+# 5. [ ] OPTIONAL: tests?
+# 6. [ ] OPTIONAL: restructure project
+# 7. [ ] init default config
