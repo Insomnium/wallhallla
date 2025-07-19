@@ -2,3 +2,4 @@ attrs
 configparser
 argparse
 requests
+schedule
