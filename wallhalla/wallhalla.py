@@ -66,11 +66,10 @@ class WHClient:
     def collections(self):
         return self.__get_json('/collections')['data']
 
-    def wallpapers(self, page: int = 0):
+    def wallpapers(self, page: int = 0) -> dict:
         collections = self.collections()
         collection = next(filter(lambda c: c['label'] == self.__config.collection, collections), None)
-        return sorted(self.__get_json(resource=f'/collections/{self.__config.login}/{collection["id"]}', params={'page': page})['data'], key=lambda x: x['id'])
-
+        return self.__get_json(resource=f'/collections/{self.__config.login}/{collection["id"]}', params={'page': page})
 
 class Wallhalla:
     def __init__(self, config: WHConfig, client: WHClient, changer: WallChanger):
@@ -79,33 +78,44 @@ class Wallhalla:
         self.__changer = changer
         self.__wallpapers = []
         self.__last_fetched_at = 0
-        self.__current_id = '0'
+        self.__current_wallpaper_id = '0'
+        self.__collection_size = 0
         self.__page_size = 0
-        self.__page = 0
+        self.__page_index = 0
         self.__page_entry_index = 0
-        self.__debug_counter = 0
+        self.__wallpaper_index = 0
 
     def set_next(self):
         self.__refetch()
-        self.__current_id = next(filter(lambda w: w['id'] > self.__current_id, self.__wallpapers), None)['id']
+        self.__current_wallpaper_id = next(filter(lambda w: w['id'] > self.__current_wallpaper_id, self.__wallpapers), None)['id']
         self.__page_entry_index += 1
-        print(f'Next ID: {self.__current_id}; interation: {self.__debug_counter}')
-        self.__debug_counter += 1
+        self.__wallpaper_index += 1
+        print(f'Next ID: {self.__current_wallpaper_id}; interation: {self.__wallpaper_index}')
+
+    def __fetch(self):
+        walls_meta = self.__client.wallpapers(page=self.__page_index)
+        self.__wallpapers = sorted(walls_meta['data'], key=lambda x: x['id'])
+        self.__page_size = walls_meta['meta']['per_page']
+        self.__collection_size = walls_meta['meta']['total']
+        self.__last_fetched_at = time.time()
 
     def __refetch(self):
-        if self.__is_page_end_reached():
-            print('Reached end of page')
-            self.__page += 1
+        if self.__wallpaper_index > self.__collection_size - 1: # end of collection
             self.__page_entry_index = 0
-            self.__current_id = '0'
-            self.__wallpapers = self.__client.wallpapers(page=self.__page)
-            self.__last_fetched_at = time.time()
-            self.__page_size = len(self.__wallpapers)
+            self.__page_index = 1
+            self.__current_wallpaper_id = '0'
+            self.__wallpaper_index = 0
+            self.__fetch()
+        elif self.__is_page_end_reached():
+        # if self.__is_page_end_reached():
+            print('Reached end of page')
+            self.__page_index += 1
+            self.__page_entry_index = 0
+            self.__current_wallpaper_id = '0'
+            self.__fetch()
         elif self.__is_fetch_cache_expired():
             print('Fetch cache expired...')
-            self.__wallpapers = self.__client.wallpapers(page=self.__page)
-            self.__page_size = len(self.__wallpapers)
-            self.__last_fetched_at = time.time()
+            self.__fetch()
 
     def __is_page_end_reached(self):
         return self.__page_entry_index >= self.__page_size
