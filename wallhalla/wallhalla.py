@@ -70,6 +70,7 @@ class WHConfig:
             with open(CONFIG_PATH, 'w') as f:
                 config.write(f)
 
+
 class Environment(Enum): # TODO: add support for other popular envs & test
     GNOME = 'GNOME'
     KDE = 'KDE'
@@ -98,8 +99,8 @@ class DefaultWallChanger:
             check=True,
         )
 
-class GnomeWallChanger(DefaultWallChanger):
 
+class GnomeWallChanger(DefaultWallChanger):
     def set_wallpaper(self, path: Path):
         subprocess.run(
             ['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', path.absolute()],
@@ -140,6 +141,7 @@ class WHClient:
                 f.write(requests.get(url).content)
         return path
 
+
 class Wallhalla:
     def __init__(self, config: WHConfig, client: WHClient, changer: DefaultWallChanger):
         self.__config = config
@@ -175,7 +177,7 @@ class Wallhalla:
         self.__last_fetched_at = time.time()
 
     def __refetch(self):
-        if self.__is_eoc_reached(): # end of collection
+        if self.__is_eoc_reached():
             self.__page_entry_index = 0
             self.__page_index = 1
             self.__current_wallpaper_id = '0'
@@ -227,10 +229,10 @@ if __name__ == '__main__':
     wh.schedule_collection()
 
 ### TODO:
-# 1. [ ] cache limit
+# 1. [X] cache limit
 # 2. [X] wall change timer
 # 3. [X] extract wallhaven client
 # 4. [ ] OPTIONAL: package for Archlinux
 # 5. [ ] OPTIONAL: tests?
 # 6. [ ] OPTIONAL: restructure project
-# 7. [ ] init default config
+# 7. [X] init default config
