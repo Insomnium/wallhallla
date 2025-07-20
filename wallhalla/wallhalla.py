@@ -1,6 +1,8 @@
 import os.path
 import subprocess
-from time import sleep
+from enum import Enum
+import logging
+import os
 
 import attr
 import configparser
@@ -9,6 +11,9 @@ import requests
 from pathlib import Path
 import schedule
 import time
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(level=logging.DEBUG)
 
 class WHConfig:
     api_key: str = attr.ib()
@@ -37,15 +42,27 @@ class WHConfig:
         self.cache_dir = args.cache_dir or file_conf["CACHE"]["cache.dir"]
         self.fetch_freq = int(args.freq_fetch_sec or file_conf["CACHE"]["cache.fetch.sec"])
 
+class Environment(Enum): # TODO: add support for other popular envs & test
+    GNOME = 'GNOME'
+    KDE = 'KDE'
+    NONE = 'NONE'
 
-class WallChanger:
+    def build_changer(self, **kwargs):
+        match self:
+            case Environment.GNOME:
+                return GnomeWallChanger(**kwargs)
+            case _:
+                return DefaultWallChanger(**kwargs)
+
+
+class DefaultWallChanger:
     def __init__(self, config: WHConfig):
         self.__cache_dir = Path(config.cache_dir)
         if not self.__cache_dir.exists():
             self.__cache_dir.mkdir(parents=True)
 
     def set_wallpaper(self, path: Path):
-        print(f'Setting wallpaper to {path}')
+        logger.debug(f'Setting wallpaper to {path}')
         subprocess.run(
             ['feh', '--bg-scale', path.absolute()],
             capture_output=True,
@@ -53,13 +70,24 @@ class WallChanger:
             check=True,
         )
 
+class GnomeWallChanger(DefaultWallChanger):
+
+    def set_wallpaper(self, path: Path):
+        subprocess.run(
+            ['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', path.absolute()],
+            capture_output=True,
+            text=True,
+            check=True,
+        )
+
+
 class WHClient:
     def __init__(self, config: WHConfig):
         self.__config = config
         self.__base_uri = 'https://wallhaven.cc/api/v1'
 
     def __get_json(self, resource: str, params: dict = {}) -> dict:
-        print(f'Requesting resource {resource} with params {params}')
+        logger.debug(f'Requesting resource {resource} with params {params}')
         params.update({'apikey': self.__config.api_key})
         response = requests.get(f'{self.__base_uri}{resource}', params=params)
 
@@ -85,7 +113,7 @@ class WHClient:
         return path
 
 class Wallhalla:
-    def __init__(self, config: WHConfig, client: WHClient, changer: WallChanger):
+    def __init__(self, config: WHConfig, client: WHClient, changer: DefaultWallChanger):
         self.__config = config
         self.__client = client
         self.__changer = changer
@@ -104,7 +132,7 @@ class Wallhalla:
         self.__current_wallpaper_id = current_wallpaper['id']
         self.__page_entry_index += 1
         self.__wallpaper_index += 1
-        print(f'Next ID: {self.__current_wallpaper_id}; interation: {self.__wallpaper_index}')
+        logger.debug(f'Next ID: {self.__current_wallpaper_id}; interation: {self.__wallpaper_index}')
         file_url = current_wallpaper['path']
         file_name = file_url.split('/')[-1]
         wallpaper_path = self.__client.download_wallpaper(file_url, file_name)
@@ -118,23 +146,28 @@ class Wallhalla:
         self.__last_fetched_at = time.time()
 
     def __refetch(self):
-        if self.__wallpaper_index > self.__collection_size - 1: # end of collection
+        if self.__is_eoc_reached(): # end of collection
             self.__page_entry_index = 0
             self.__page_index = 1
             self.__current_wallpaper_id = '0'
             self.__wallpaper_index = 0
             self.__fetch()
-        elif self.__is_page_end_reached():
-            print('Reached end of page')
+        elif self.__is_eop_reached():
+            logger.debug('Reached end of page')
             self.__page_index += 1
             self.__page_entry_index = 0
             self.__current_wallpaper_id = '0'
             self.__fetch()
         elif self.__is_fetch_cache_expired():
-            print('Fetch cache expired...')
+            logger.debug('Fetch cache expired')
             self.__fetch()
 
-    def __is_page_end_reached(self):
+    def __is_eoc_reached(self):
+        """ End if the collection reached check """
+        return self.__wallpaper_index > self.__collection_size - 1
+
+    def __is_eop_reached(self):
+        """ End if the page reached check """
         return self.__page_entry_index >= self.__page_size
 
     def __is_fetch_cache_expired(self):
@@ -150,7 +183,10 @@ class Wallhalla:
 
 if __name__ == '__main__':
     conf = WHConfig()
-    wh = Wallhalla(conf, WHClient(conf), WallChanger(conf))
+    env_code = os.getenv('DESKTOP_SESSION') or os.getenv('XDG_SESSION_DESKTOP')
+    env = Environment(env_code.upper())
+    changer = env.build_changer(config=conf)
+    wh = Wallhalla(conf, WHClient(conf), changer)
 
     wh.schedule_collection()
 
