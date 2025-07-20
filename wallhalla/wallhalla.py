@@ -38,6 +38,7 @@ class WHConfig:
         arg_conf.add_argument('--collection', help='Override collection')
         arg_conf.add_argument('--freq-sec', help='Override frequency in seconds')
         arg_conf.add_argument('--freq-fetch-sec', help='Collection content fetching interval in seconds')
+        arg_conf.add_argument('--cache-disc-mb', help='Disk cache limit in MB')
         args = arg_conf.parse_args()
 
         self.api_key = args.api_key or file_conf["DEFAULT"]["api.key"]
@@ -46,6 +47,7 @@ class WHConfig:
         self.freq_sec = int(args.freq_sec or file_conf["DEFAULT"]["frequency.sec"])
         self.cache_dir = args.cache_dir or file_conf["CACHE"]["cache.dir"]
         self.fetch_freq = int(args.freq_fetch_sec or file_conf["CACHE"]["cache.fetch.sec"])
+        self.cache_disk_limit_mb = int(args.cache_disc_mb or file_conf["CACHE"]["cache.disk.mb"])
 
     @staticmethod
     def __preserve_config():
@@ -63,6 +65,7 @@ class WHConfig:
             config['CACHE'] = {
                 'cache.dir': '/tmp/wallhalla',
                 'cache.fetch.sec': '60',
+                'cache.disk.mb': '100',
             }
             with open(CONFIG_PATH, 'w') as f:
                 config.write(f)
@@ -132,10 +135,18 @@ class WHClient:
     def download_wallpaper(self, url: str, file_name: str) -> Path:
         path_str = os.path.join(self.__config.cache_dir, file_name)
         path = Path(path_str)
+        self.__maintain_disk_cache()
         if not path.exists():
             with open(path_str, 'wb') as f:
                 f.write(requests.get(url).content)
         return path
+
+    def __maintain_disk_cache(self):
+        cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
+        cache_limit_bytes = self.__config.cache_disk_limit_mb * 1024 * 1024
+        while cache_size_bytes >= cache_limit_bytes:
+            os.remove(os.path.join(self.__config.cache_dir, os.listdir(self.__config.cache_dir)[-1]))
+            cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
 
 class Wallhalla:
     def __init__(self, config: WHConfig, client: WHClient, changer: DefaultWallChanger):
