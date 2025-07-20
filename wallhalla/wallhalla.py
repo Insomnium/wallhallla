@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 import os.path
 import subprocess
 from enum import Enum
@@ -15,6 +17,8 @@ import time
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.DEBUG)
 
+CONFIG_PATH = f"{Path.home()}/.config/wallhalla/config"
+
 class WHConfig:
     api_key: str = attr.ib()
     login: str = attr.ib()
@@ -23,8 +27,9 @@ class WHConfig:
     freq_sec: int = attr.ib()
 
     def __init__(self):
+        self.__preserve_config()
         file_conf = configparser.ConfigParser()
-        file_conf.read(f"{Path.home()}/.config/wallhalla/config")
+        file_conf.read(CONFIG_PATH)
 
         arg_conf = argparse.ArgumentParser()
         arg_conf.add_argument('--api-key', help='Override API key') # TODO: request from stdin for security
@@ -41,6 +46,26 @@ class WHConfig:
         self.freq_sec = int(args.freq_sec or file_conf["DEFAULT"]["frequency.sec"])
         self.cache_dir = args.cache_dir or file_conf["CACHE"]["cache.dir"]
         self.fetch_freq = int(args.freq_fetch_sec or file_conf["CACHE"]["cache.fetch.sec"])
+
+    @staticmethod
+    def __preserve_config():
+        if not Path(CONFIG_PATH).exists():
+            logger.debug(f'Initializing default config file at {CONFIG_PATH}')
+            conf_dir, _, _ = CONFIG_PATH.rpartition(os.sep)
+            Path(conf_dir).mkdir(parents=True)
+            config = configparser.ConfigParser()
+            config['DEFAULT'] = {
+                'api.key': '<API_KEY>',
+                'login': '<LOGIN>',
+                'collection': '<COLLECTION>',
+                'freq.sec': '10',
+            }
+            config['CACHE'] = {
+                'cache.dir': '/tmp/wallhalla',
+                'cache.fetch.sec': '60',
+            }
+            with open(CONFIG_PATH, 'w') as f:
+                config.write(f)
 
 class Environment(Enum): # TODO: add support for other popular envs & test
     GNOME = 'GNOME'
