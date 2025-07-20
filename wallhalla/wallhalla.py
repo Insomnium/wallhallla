@@ -135,18 +135,10 @@ class WHClient:
     def download_wallpaper(self, url: str, file_name: str) -> Path:
         path_str = os.path.join(self.__config.cache_dir, file_name)
         path = Path(path_str)
-        self.__maintain_disk_cache()
         if not path.exists():
             with open(path_str, 'wb') as f:
                 f.write(requests.get(url).content)
         return path
-
-    def __maintain_disk_cache(self):
-        cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
-        cache_limit_bytes = self.__config.cache_disk_limit_mb * 1024 * 1024
-        while cache_size_bytes >= cache_limit_bytes:
-            os.remove(os.path.join(self.__config.cache_dir, os.listdir(self.__config.cache_dir)[-1]))
-            cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
 
 class Wallhalla:
     def __init__(self, config: WHConfig, client: WHClient, changer: DefaultWallChanger):
@@ -171,6 +163,7 @@ class Wallhalla:
         logger.debug(f'Next ID: {self.__current_wallpaper_id}; interation: {self.__wallpaper_index}')
         file_url = current_wallpaper['path']
         file_name = file_url.split('/')[-1]
+        self.__maintain_disk_cache()
         wallpaper_path = self.__client.download_wallpaper(file_url, file_name)
         self.__changer.set_wallpaper(wallpaper_path)
 
@@ -208,6 +201,13 @@ class Wallhalla:
 
     def __is_fetch_cache_expired(self):
         return time.time() - self.__last_fetched_at > self.__config.fetch_freq
+
+    def __maintain_disk_cache(self):
+        cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
+        cache_limit_bytes = self.__config.cache_disk_limit_mb * 1024 * 1024
+        while cache_size_bytes >= cache_limit_bytes:
+            os.remove(os.path.join(self.__config.cache_dir, os.listdir(self.__config.cache_dir)[-1]))
+            cache_size_bytes = sum(os.path.getsize(f) for f in os.scandir(self.__config.cache_dir) if f.is_file())
 
     def schedule_collection(self):
         schedule.every(self.__config.freq_sec).seconds.do(self.set_next)
