@@ -72,6 +72,7 @@ class WHConfig:
 
 
 class Environment(Enum): # TODO: add support for other popular envs & test
+    HYPRLAND = 'HYPRLAND'
     GNOME = 'GNOME'
     KDE = 'KDE'
     NONE = 'NONE'
@@ -80,6 +81,8 @@ class Environment(Enum): # TODO: add support for other popular envs & test
         match self:
             case Environment.GNOME:
                 return GnomeWallChanger(**kwargs)
+            case Environment.HYPRLAND:
+                return HyprlandWallChanger(**kwargs)
             case _:
                 return DefaultWallChanger(**kwargs)
 
@@ -90,24 +93,21 @@ class DefaultWallChanger:
         if not self.__cache_dir.exists():
             self.__cache_dir.mkdir(parents=True)
 
+    def call_proc(self, command: list, unsafe=False):
+        subprocess.run(command, capture_output=True, text=True, check=not unsafe)
+
     def set_wallpaper(self, path: Path):
         logger.debug(f'Setting wallpaper to {path}')
-        subprocess.run(
-            ['feh', '--bg-scale', path.absolute()],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
+        self.call_proc(['feh', '--bg-scale', path.absolute()])
 
 
 class GnomeWallChanger(DefaultWallChanger):
     def set_wallpaper(self, path: Path):
-        subprocess.run(
-            ['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', path.absolute()],
-            capture_output=True,
-            text=True,
-            check=True,
-        )
+        self.call_proc(['gsettings', 'set', 'org.gnome.desktop.background', 'picture-uri', path.absolute()])
+
+class HyprlandWallChanger(DefaultWallChanger):
+    def set_wallpaper(self, path: Path):
+        self.call_proc(['swww', 'img', path.absolute(), '-t', 'random'], unsafe=True)
 
 
 class WHClient:

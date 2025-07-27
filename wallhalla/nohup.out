@@ -1,0 +1,671 @@
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Requesting resource /collections with params {}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 21kr8m; interation: 1
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/21/wallhaven-21kr8m.jpg HTTP/1.1" 200 7554250
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 21krrx; interation: 2
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/21/wallhaven-21krrx.jpg HTTP/1.1" 200 8650438
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 3qkddv; interation: 3
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3q/wallhaven-3qkddv.jpg HTTP/1.1" 200 6788677
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 6ljr3x; interation: 4
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6l/wallhaven-6ljr3x.jpg HTTP/1.1" 200 9697640
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6lqe9w; interation: 5
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6l/wallhaven-6lqe9w.jpg HTTP/1.1" 200 2268301
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6lqmqx; interation: 6
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6l/wallhaven-6lqmqx.jpg HTTP/1.1" 200 3477671
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 7j696y; interation: 7
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7j/wallhaven-7j696y.jpg HTTP/1.1" 200 4206641
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7j6xde; interation: 8
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7j/wallhaven-7j6xde.jpg HTTP/1.1" 200 2311671
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7jg5vy; interation: 9
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7j/wallhaven-7jg5vy.jpg HTTP/1.1" 200 11105833
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 9o6d2w; interation: 10
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/9o/wallhaven-9o6d2w.jpg HTTP/1.1" 200 7663694
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: d857lm; interation: 11
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/d8/wallhaven-d857lm.png HTTP/1.1" 200 16640792
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: d85ewm; interation: 12
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/d8/wallhaven-d85ewm.png HTTP/1.1" 200 5068127
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: k8385q; interation: 13
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/k8/wallhaven-k8385q.jpg HTTP/1.1" 200 10642677
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: lyqr9y; interation: 14
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/ly/wallhaven-lyqr9y.jpg HTTP/1.1" 200 2237733
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: ogdyl9; interation: 15
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/og/wallhaven-ogdyl9.png HTTP/1.1" 200 3819596
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: qr9rqq; interation: 16
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/qr/wallhaven-qr9rqq.jpg HTTP/1.1" 200 5494742
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: vpg295; interation: 17
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vp/wallhaven-vpg295.jpg HTTP/1.1" 200 881105
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: vpmx83; interation: 18
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vp/wallhaven-vpmx83.jpg HTTP/1.1" 200 5958173
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: vpx21l; interation: 19
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vp/wallhaven-vpx21l.jpg HTTP/1.1" 200 12055186
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: w5872r; interation: 20
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/w5/wallhaven-w5872r.jpg HTTP/1.1" 200 12768431
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: weppkq; interation: 21
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/we/wallhaven-weppkq.jpg HTTP/1.1" 200 15826238
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 1}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=1&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: yq7p6l; interation: 22
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/yq/wallhaven-yq7p6l.jpg HTTP/1.1" 200 3283692
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: yqj1ex; interation: 23
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/yq/wallhaven-yqj1ex.png HTTP/1.1" 200 10027630
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: yqj53x; interation: 24
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/yq/wallhaven-yqj53x.png HTTP/1.1" 200 4828270
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Reached end of page
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 013dkg; interation: 25
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/01/wallhaven-013dkg.jpg HTTP/1.1" 200 359908
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 1p658g; interation: 26
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/1p/wallhaven-1p658g.png HTTP/1.1" 200 680980
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 1p7q83; interation: 27
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/1p/wallhaven-1p7q83.jpg HTTP/1.1" 200 577969
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 2ypz9x; interation: 28
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/2y/wallhaven-2ypz9x.jpg HTTP/1.1" 200 6208506
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 47jdo3; interation: 29
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/47/wallhaven-47jdo3.jpg HTTP/1.1" 200 152383
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 5g22q5; interation: 30
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5g22q5.png HTTP/1.1" 200 4072110
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 5geev3; interation: 31
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5geev3.jpg HTTP/1.1" 200 449648
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6dvo5q; interation: 32
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6dvo5q.jpg HTTP/1.1" 200 2867194
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6dxrjq; interation: 33
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6dxrjq.jpg HTTP/1.1" 200 19319373
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 6dxxdl; interation: 34
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6dxxdl.jpg HTTP/1.1" 200 18105398
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7p8zg3; interation: 35
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7p8zg3.png HTTP/1.1" 200 998364
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 7py28o; interation: 36
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7py28o.jpg HTTP/1.1" 200 838334
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7pyrze; interation: 37
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7pyrze.jpg HTTP/1.1" 200 3371108
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: jxmxpw; interation: 38
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxmxpw.png HTTP/1.1" 200 3446800
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: kxp166; interation: 39
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/kx/wallhaven-kxp166.png HTTP/1.1" 200 4012715
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: l85m5r; interation: 40
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/l8/wallhaven-l85m5r.jpg HTTP/1.1" 200 687325
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: m3xr59; interation: 41
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/m3/wallhaven-m3xr59.jpg HTTP/1.1" 200 431332
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: p97l5e; interation: 42
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/p9/wallhaven-p97l5e.png HTTP/1.1" 200 12167969
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: p9qjm9; interation: 43
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/p9/wallhaven-p9qjm9.png HTTP/1.1" 200 2699631
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: vqwmm3; interation: 44
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vq/wallhaven-vqwmm3.png HTTP/1.1" 200 1497657
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: x6qypo; interation: 45
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/x6/wallhaven-x6qypo.png HTTP/1.1" 200 15586482
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: x6vjkz; interation: 46
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/x6/wallhaven-x6vjkz.png HTTP/1.1" 200 3470012
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: x6x6jz; interation: 47
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/x6/wallhaven-x6x6jz.jpg HTTP/1.1" 200 1834046
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 2}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=2&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: zykl1y; interation: 48
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/zy/wallhaven-zykl1y.jpg HTTP/1.1" 200 7764518
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Reached end of page
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 2y7ldg; interation: 49
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/2y/wallhaven-2y7ldg.jpg HTTP/1.1" 200 590178
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 2y7v8m; interation: 50
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/2y/wallhaven-2y7v8m.png HTTP/1.1" 200 2483590
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 3lmoqv; interation: 51
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3l/wallhaven-3lmoqv.png HTTP/1.1" 200 587063
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 3lp2md; interation: 52
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3l/wallhaven-3lp2md.jpg HTTP/1.1" 200 7674953
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 5gej77; interation: 53
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5gej77.jpg HTTP/1.1" 200 4411134
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 5gxvv3; interation: 54
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5gxvv3.png HTTP/1.1" 200 3302790
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 7p8pyo; interation: 55
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7p8pyo.jpg HTTP/1.1" 200 16696278
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 85q261; interation: 56
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/85/wallhaven-85q261.jpg HTTP/1.1" 200 8859701
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 85zxrj; interation: 57
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/85/wallhaven-85zxrj.png HTTP/1.1" 200 12445478
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 9dp3y1; interation: 58
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/9d/wallhaven-9dp3y1.jpg HTTP/1.1" 200 719373
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: exk2zr; interation: 59
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/ex/wallhaven-exk2zr.png HTTP/1.1" 200 15998124
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: jxz59q; interation: 60
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxz59q.jpg HTTP/1.1" 200 12724007
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: m3jqy1; interation: 61
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/m3/wallhaven-m3jqy1.jpg HTTP/1.1" 200 1956017
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: qz766r; interation: 62
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/qz/wallhaven-qz766r.jpg HTTP/1.1" 200 4929263
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: qz7dl5; interation: 63
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/qz/wallhaven-qz7dl5.jpg HTTP/1.1" 200 5690103
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: rrm1gm; interation: 64
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/rr/wallhaven-rrm1gm.jpg HTTP/1.1" 200 428878
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: vq8j98; interation: 65
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vq/wallhaven-vq8j98.png HTTP/1.1" 200 1951068
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: vq8lom; interation: 66
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vq/wallhaven-vq8lom.jpg HTTP/1.1" 200 595125
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: vq8xpl; interation: 67
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vq/wallhaven-vq8xpl.png HTTP/1.1" 200 695215
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: wezgq7; interation: 68
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/we/wallhaven-wezgq7.png HTTP/1.1" 200 1735170
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: wezo5r; interation: 69
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/we/wallhaven-wezo5r.png HTTP/1.1" 200 247511
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 3}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=3&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: x6q953; interation: 70
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/x6/wallhaven-x6q953.png HTTP/1.1" 200 18002374
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: yx1j27; interation: 71
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/yx/wallhaven-yx1j27.jpg HTTP/1.1" 200 7004463
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: yxd66k; interation: 72
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/yx/wallhaven-yxd66k.png HTTP/1.1" 200 1756843
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Reached end of page
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 3lmo2d; interation: 73
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3l/wallhaven-3lmo2d.png HTTP/1.1" 200 6065753
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 3lpr1d; interation: 74
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3l/wallhaven-3lpr1d.jpg HTTP/1.1" 200 5124142
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 3lpymv; interation: 75
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/3l/wallhaven-3lpymv.png HTTP/1.1" 200 6721694
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 6d8wd7; interation: 76
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6d8wd7.jpg HTTP/1.1" 200 611352
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6d8wgq; interation: 77
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6d8wgq.png HTTP/1.1" 200 15061196
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7pzmrv; interation: 78
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7pzmrv.jpg HTTP/1.1" 200 8966069
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 85yl61; interation: 79
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/85/wallhaven-85yl61.png HTTP/1.1" 200 10473174
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 9d1ey8; interation: 80
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/9d/wallhaven-9d1ey8.jpg HTTP/1.1" 200 5235792
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: exmk6r; interation: 81
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/ex/wallhaven-exmk6r.png HTTP/1.1" 200 13389326
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: jxgklm; interation: 82
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxgklm.jpg HTTP/1.1" 200 3840300
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: jxglrp; interation: 83
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxglrp.png HTTP/1.1" 200 15973786
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: jxgmjy; interation: 84
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxgmjy.jpg HTTP/1.1" 200 6211550
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: jxgvg5; interation: 85
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/jx/wallhaven-jxgvg5.jpg HTTP/1.1" 200 7604288
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: l8626q; interation: 86
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/l8/wallhaven-l8626q.jpg HTTP/1.1" 200 7730477
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: l86kgl; interation: 87
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/l8/wallhaven-l86kgl.jpg HTTP/1.1" 200 3623402
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: o5pp15; interation: 88
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/o5/wallhaven-o5pp15.png HTTP/1.1" 200 11018892
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: o5pzm7; interation: 89
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/o5/wallhaven-o5pzm7.png HTTP/1.1" 200 14338151
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: p963gj; interation: 90
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/p9/wallhaven-p963gj.jpg HTTP/1.1" 200 3854115
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: p9e5x3; interation: 91
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/p9/wallhaven-p9e5x3.jpg HTTP/1.1" 200 3896101
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: qzxodq; interation: 92
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/qz/wallhaven-qzxodq.jpg HTTP/1.1" 200 10807164
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: rr8zmw; interation: 93
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/rr/wallhaven-rr8zmw.jpg HTTP/1.1" 200 2217849
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 4}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=4&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: vqkw1p; interation: 94
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/vq/wallhaven-vqkw1p.jpg HTTP/1.1" 200 12582173
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: x6r3mz; interation: 95
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/x6/wallhaven-x6r3mz.jpg HTTP/1.1" 200 11364750
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: zyw2ry; interation: 96
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/zy/wallhaven-zyw2ry.jpg HTTP/1.1" 200 8671866
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Reached end of page
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 5}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=5&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 2yl3pm; interation: 97
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/2y/wallhaven-2yl3pm.jpg HTTP/1.1" 200 735636
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 2yled6; interation: 98
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/2y/wallhaven-2yled6.jpg HTTP/1.1" 200 161522
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 5g9we5; interation: 99
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5g9we5.jpg HTTP/1.1" 200 11544254
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 5}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=5&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 5gozz3; interation: 100
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/5g/wallhaven-5gozz3.jpg HTTP/1.1" 200 486879
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6d32l7; interation: 101
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6d32l7.jpg HTTP/1.1" 200 3772083
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 6d6ll6; interation: 102
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/6d/wallhaven-6d6ll6.png HTTP/1.1" 200 3298117
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Fetch cache expired
+DEBUG:__main__:Requesting resource /collections with params {'apikey': 'xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56'}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections?apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Requesting resource /collections/Insomnium/306635 with params {'page': 5}
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://wallhaven.cc:443 "GET /api/v1/collections/Insomnium/306635?page=5&apikey=xyjDHm0gdtjY5CWxiK7d9P7Zwoxm5l56 HTTP/1.1" 200 None
+DEBUG:__main__:Next ID: 7p58gy; interation: 103
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7p58gy.png HTTP/1.1" 200 12463109
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 7pkoxo; interation: 104
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/7p/wallhaven-7pkoxo.png HTTP/1.1" 200 9940571
+DEBUG:schedule:Running job Job(interval=10, unit=seconds, do=set_next, args=(), kwargs={})
+DEBUG:__main__:Next ID: 85mqwy; interation: 105
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): w.wallhaven.cc:443
+DEBUG:urllib3.connectionpool:https://w.wallhaven.cc:443 "GET /full/85/wallhaven-85mqwy.png HTTP/1.1" 200 16200238
